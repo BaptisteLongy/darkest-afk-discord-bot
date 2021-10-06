@@ -1,0 +1,32 @@
+{
+  "name": "darkest-afk-discord-bot",
+  "version": "1.0.0",
+  "description": "DarkestAFK Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaptisteLongy/darkest-afk-discord-bot.git"
+  },
+  "keywords": [
+    "darkest",
+    "afk",
+    "discord",
+    "bot"
+  ],
+  "author": "Baptiste Longy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaptisteLongy/darkest-afk-discord-bot/issues"
+  },
+  "homepage": "https://github.com/BaptisteLongy/darkest-afk-discord-bot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0"
+  }
+}
