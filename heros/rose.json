@@ -1,0 +1,19 @@
+{
+    "class": "Support",
+    "trigger1" : {
+        "name": "Surge of Strength",
+        "effect": "+20 energy, 7% chance"
+    },
+    "trigger2" : {
+        "name": "Heroes Never Die",
+        "effect": "Resurrect, 18% chance"
+    },
+    "resistances": {
+        "burning": "20%",
+        "poisoning": "20%",
+        "weakening": "20%",
+        "stunning": "10%",
+        "freezing": "5%",
+        "bleeding": "5%"
+    }
+}
