@@ -1,5 +1,7 @@
 {
+    "name": "Rose",
     "class": "Support",
+    "icon": "https://i.imgur.com/Agg9PRV.png",
     "trigger1" : {
         "name": "Surge of Strength",
         "effect": "+20 energy, 7% chance"
