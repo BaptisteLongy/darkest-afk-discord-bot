@@ -1,6 +1,90 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('fs');
 
+function getEmbedColor(heroClass) {
+    return heroClass === "Support" ? "#0bd92a" : heroClass === "Tank" ? "#241def" : "#d90909"
+}
+
+function generateEmbedHero(heroData) {
+    let embedColor = getEmbedColor(heroData.class)
+
+    return {
+        title: heroData.name,
+        color: embedColor,
+        thumbnail: {
+            url: heroData.icon,
+        },
+        fields: [
+            {
+                name: 'Class',
+                value: heroData.class,
+            },
+        ]
+    };
+}
+
+function generateEmbedSkills(heroData) {
+    let embedColor = getEmbedColor(heroData.class)
+
+    return {
+        title: "Skills",
+        color: embedColor,
+        fields: [
+            {
+                name: heroData.trigger1.name,
+                value: heroData.trigger1.effect,
+                inline: true
+            },
+            {
+                name: heroData.trigger2.name,
+                value: heroData.trigger2.effect,
+                inline: true
+            },
+        ]
+    };
+}
+
+function generateEmbedResists(heroData) {
+    let embedColor = getEmbedColor(heroData.class)
+
+    return {
+        title: "Resistances",
+        color: embedColor,
+        fields: [
+            {
+                name: "Burning",
+                value: heroData.resistances.burning,
+                inline: true
+            },
+            {
+                name: "Poisoning",
+                value: heroData.resistances.poisoning,
+                inline: true
+            },
+            {
+                name: "Weakening",
+                value: heroData.resistances.weakening,
+                inline: true
+            },
+            {
+                name: "Stunning",
+                value: heroData.resistances.stunning,
+                inline: true
+            },
+            {
+                name: "Freezing",
+                value: heroData.resistances.freezing,
+                inline: true
+            },
+            {
+                name: "Bleeding",
+                value: heroData.resistances.bleeding,
+                inline: true
+            },
+        ]
+    };
+}
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('hero')
@@ -12,70 +96,15 @@ module.exports = {
     async execute(interaction) {
             await interaction.deferReply()
         try {
-            const heroName = interaction.options.getString('heroname');
+            const heroName = interaction.options.getString('heroname').toLowerCase();
             const rawHero = fs.readFileSync(`./heros/${heroName}.json`)
             let hero = JSON.parse(rawHero);
 
-            const heroEmbed = {
-                title: heroName.charAt(0).toUpperCase() + heroName.slice(1),
-                fields: [
-                    {
-                        name: 'Class',
-                        value: hero.class,
-                    },
-                    {
-                        name: 'Skills',
-                        value: '\u200b',
-                    },
-                    {
-                        name: hero.trigger1.name,
-                        value: hero.trigger1.effect,
-                        inline: true
-                    },
-                    {
-                        name: hero.trigger2.name,
-                        value: hero.trigger2.effect,
-                        inline: true
-                    },
-                    {
-                        name: '\u200b',
-                        value: '\u200b',
-                        inline: false,
-                    },
-                    {
-                        name: "Burning",
-                        value: hero.resistances.burning,
-                        inline: true
-                    },
-                    {
-                        name: "Poisoning",
-                        value: hero.resistances.poisoning,
-                        inline: true
-                    },
-                    {
-                        name: "Weakening",
-                        value: hero.resistances.weakening,
-                        inline: true
-                    },
-                    {
-                        name: "Stunning",
-                        value: hero.resistances.stunning,
-                        inline: true
-                    },
-                    {
-                        name: "Freezing",
-                        value: hero.resistances.freezing,
-                        inline: true
-                    },
-                    {
-                        name: "Bleeding",
-                        value: hero.resistances.bleeding,
-                        inline: true
-                    },
-                ]
-            };
+            const heroEmbed = generateEmbedHero(hero)
+            const skillsEmbed = generateEmbedSkills(hero)
+            const resistEmbed = generateEmbedResists(hero)
 
-            await interaction.editReply({embeds: [heroEmbed]});
+            await interaction.editReply({embeds: [heroEmbed, skillsEmbed, resistEmbed]});
         } catch (error) {
             console.log(error)
             await interaction.editReply(`I don't know this hero :(`);
