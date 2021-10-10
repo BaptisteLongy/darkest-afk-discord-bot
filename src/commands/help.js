@@ -13,10 +13,15 @@ module.exports = {
                     name: '/help',
                     value: 'Displays this list',
                 },
+                
+                {
+                    name: '/hero',
+                    value: 'Displays infos about a specific hero'
+                },
                 {
                     name: '/ping',
                     value: 'Just a ping! Helps checking if the bot is online',
-                },
+                }
             ]
         };
 
