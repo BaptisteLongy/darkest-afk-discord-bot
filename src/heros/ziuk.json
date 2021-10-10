@@ -1,0 +1,19 @@
+{
+    "name": "Zi'uk",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/BztSQi6.jpg",
+    "skills": [
+        {
+            "name": "Poisoned Dagger",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "5%",
+        "burning": "10%",
+        "freezing": "5%",
+        "poisoning": "20%",
+        "stunning": "20%",
+        "weakening": "20%"
+    }
+}
