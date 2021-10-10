@@ -90,6 +90,7 @@ module.exports = {
                 .addChoice("Drowzet", "drowzet")
                 .addChoice("Ridael", "ridael")
                 .addChoice("Tiara", "tiara")
+                .addChoice("Violet", "violet")
             ),
 
     async execute(interaction) {

@@ -1,0 +1,19 @@
+{
+    "name": "Violet",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/IqrzWEg.jpg",
+    "skills": [
+        {
+            "name": "Freezing Burst",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "10%",
+        "burning": "0%",
+        "freezing": "15%",
+        "poisoning": "15%",
+        "stunning": "15%",
+        "weakening": "15%"
+    }
+}
