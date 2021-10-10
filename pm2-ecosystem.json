@@ -1,0 +1,8 @@
+{
+    "name": "darkest-afk-discord-bot",
+    "script": "src/index.js",
+    "instances": "1",
+    "env" : {
+      "NODE_ENV": "production"
+    }
+  }
