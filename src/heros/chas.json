@@ -1,0 +1,19 @@
+{
+    "name": "Chas",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/0FkjrWm.jpg",
+    "skills": [
+        {
+            "name": "Holy Hand Grenade",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "burning": "25%",
+        "poisoning": "5%",
+        "weakening": "5%",
+        "stunning": "20%",
+        "freezing": "10%",
+        "bleeding": "15%"
+    }
+}

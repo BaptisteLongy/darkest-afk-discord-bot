@@ -29,7 +29,7 @@ function generateEmbedSkills(heroData) {
     })
 
     return {
-        title: "Skills",
+        title: "Skill Probabilities",
         color: embedColor,
         fields: skillFields
     };
@@ -86,6 +86,7 @@ module.exports = {
                 .setRequired(true)
                 .addChoice("Agra", "agra")
                 .addChoice("Avalon", "avalon")
+                .addChoice("Chas", "chas")
             ),
 
     async execute(interaction) {
