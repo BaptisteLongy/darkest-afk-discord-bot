@@ -80,19 +80,13 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('hero')
         .setDescription('Gives the details of a specific hero')
-        .addStringOption(option => {
+        .addStringOption(option => 
             option.setName('heroname')
                 .setDescription('The name of the hero')
                 .setRequired(true)
-
-            fs.readdirSync('./src/heros').filter(file => file.endsWith('.json')).forEach(
-                file => {
-                    option.addChoice(path.parse(file).name, path.parse(file).name)
-                }
-            )
-
-            return option
-        }),
+                .addChoice("Agra", "agra")
+                .addChoice("Avalon", "avalon")
+            ),
 
     async execute(interaction) {
         await interaction.deferReply()

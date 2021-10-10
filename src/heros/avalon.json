@@ -1,0 +1,23 @@
+{
+    "name": "Avalon",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/BKSZVi4.jpg",
+    "skills": [
+        {
+            "name": "Flame Gift",
+            "effect": "Probability: 7%"
+        },
+        {
+            "name": "Rescue at Dawn",
+            "effect": "Probability: 24%"
+        }
+    ],
+    "resistances": {
+        "burning": "25%",
+        "poisoning": "5%",
+        "weakening": "5%",
+        "stunning": "20%",
+        "freezing": "10%",
+        "bleeding": "15%"
+    }
+}
