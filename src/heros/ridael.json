@@ -1,0 +1,19 @@
+{
+    "name": "Ridael",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/8wSl2bl.jpg",
+    "skills": [
+        {
+            "name": "Frozen Edge",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "burning": "5%",
+        "poisoning": "20%",
+        "weakening": "5%",
+        "stunning": "15%",
+        "freezing": "20%",
+        "bleeding": "15%"
+    }
+}
