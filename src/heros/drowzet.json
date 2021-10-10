@@ -1,0 +1,19 @@
+{
+    "name": "Drowzet",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/am12qzE.jpg",
+    "skills": [
+        {
+            "name": "Frost Blades",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "burning": "0%",
+        "poisoning": "20%",
+        "weakening": "10%",
+        "stunning": "10%",
+        "freezing": "20%",
+        "bleeding": "10%"
+    }
+}
