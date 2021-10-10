@@ -89,6 +89,7 @@ module.exports = {
                 .addChoice("Chas", "chas")
                 .addChoice("Drowzet", "drowzet")
                 .addChoice("Ridael", "ridael")
+                .addChoice("Sir Joseph", "sir-joseph")
                 .addChoice("Tiara", "tiara")
                 .addChoice("Violet", "violet")
                 .addChoice("Zik & Zak", "zik-zak")

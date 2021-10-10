@@ -1,0 +1,19 @@
+{
+    "name": "Sir Joseph",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/HI4qkrd.jpg",
+    "skills": [
+        {
+            "name": "Bleeding Wound",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "15%",
+        "burning": "15%",
+        "freezing": "5%",
+        "poisoning": "5%",
+        "stunning": "20%",
+        "weakening": "20%"
+    }
+}
