@@ -1,0 +1,19 @@
+{
+    "name": "Tiara",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/rMMxtJr.jpg",
+    "skills": [
+        {
+            "name": "Poisoned Arrowhead",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "15%",
+        "burning": "15%",
+        "freezing": "10%",
+        "poisoning": "20%",
+        "stunning": "15%",
+        "weakening": "5%"
+    }
+}
