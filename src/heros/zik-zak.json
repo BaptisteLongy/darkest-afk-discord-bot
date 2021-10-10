@@ -1,0 +1,19 @@
+{
+    "name": "Zik & Zak",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/xsptEOI.jpg",
+    "skills": [
+        {
+            "name": "Devilish Endeavor",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "15%",
+        "burning": "25%",
+        "freezing": "10%",
+        "poisoning": "5%",
+        "stunning": "20%",
+        "weakening": "5%"
+    }
+}
