@@ -1,0 +1,19 @@
+{
+    "name": "Agra",
+    "class": "Damager",
+    "stats": "https://i.imgur.com/I0wZcsY.jpg",
+    "skills": [
+        {
+            "name": "Flaming Fury",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "burning": "20%",
+        "poisoning": "10%",
+        "weakening": "10%",
+        "stunning": "10%",
+        "freezing": "20%",
+        "bleeding": "10%"
+    }
+}
