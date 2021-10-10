@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('fs');
+const path = require('path');
 
 function getEmbedColor(heroClass) {
     return heroClass === "Support" ? "#0bd92a" : heroClass === "Tank" ? "#241def" : "#d90909"
@@ -11,36 +12,26 @@ function generateEmbedHero(heroData) {
     return {
         title: heroData.name,
         color: embedColor,
-        thumbnail: {
-            url: heroData.icon,
-        },
-        fields: [
-            {
-                name: 'Class',
-                value: heroData.class,
-            },
-        ]
+        image: {
+            url: heroData.stats
+        }
     };
 }
 
 function generateEmbedSkills(heroData) {
     let embedColor = getEmbedColor(heroData.class)
+    let skillFields = heroData.skills.map(skill => {
+        return {
+            name: skill.name,
+            value: skill.effect,
+            inline: true
+        }
+    })
 
     return {
         title: "Skills",
         color: embedColor,
-        fields: [
-            {
-                name: heroData.trigger1.name,
-                value: heroData.trigger1.effect,
-                inline: true
-            },
-            {
-                name: heroData.trigger2.name,
-                value: heroData.trigger2.effect,
-                inline: true
-            },
-        ]
+        fields: skillFields
     };
 }
 
@@ -89,22 +80,32 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('hero')
         .setDescription('Gives the details of a specific hero')
-        .addStringOption(option =>
+        .addStringOption(option => {
             option.setName('heroname')
                 .setDescription('The name of the hero')
-                .setRequired(true)),
+                .setRequired(true)
+
+            fs.readdirSync('./src/heros').filter(file => file.endsWith('.json')).forEach(
+                file => {
+                    option.addChoice(path.parse(file).name, path.parse(file).name)
+                }
+            )
+
+            return option
+        }),
+
     async execute(interaction) {
-            await interaction.deferReply()
+        await interaction.deferReply()
         try {
             const heroName = interaction.options.getString('heroname').toLowerCase();
-            const rawHero = fs.readFileSync(`./heros/${heroName}.json`)
+            const rawHero = fs.readFileSync(`./src/heros/${heroName}.json`)
             let hero = JSON.parse(rawHero);
 
             const heroEmbed = generateEmbedHero(hero)
             const skillsEmbed = generateEmbedSkills(hero)
             const resistEmbed = generateEmbedResists(hero)
 
-            await interaction.editReply({embeds: [heroEmbed, skillsEmbed, resistEmbed]});
+            await interaction.editReply({ embeds: [heroEmbed, skillsEmbed, resistEmbed] });
         } catch (error) {
             console.log(error)
             await interaction.editReply(`I don't know this hero :(`);

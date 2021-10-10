@@ -7,10 +7,10 @@ const clientId = "895326452365553665"
 const guildId = "406861607390543873"
 
 const commands = [];
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
+	const command = require(`./src/commands/${file}`);
 	commands.push(command.data.toJSON());
 }
 
