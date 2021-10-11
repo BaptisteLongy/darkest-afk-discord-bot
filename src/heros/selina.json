@@ -1,0 +1,19 @@
+{
+    "name": "Selina",
+    "class": "Support",
+    "stats": "https://i.imgur.com/3vycc0U.jpg",
+    "skills": [
+        {
+            "name": "Witch's Curse",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "10%",
+        "burning": "10%",
+        "freezing": "10%",
+        "poisoning": "20%",
+        "stunning": "5%",
+        "weakening": "25%"
+    }
+}

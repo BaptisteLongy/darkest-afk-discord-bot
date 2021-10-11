@@ -1,15 +1,11 @@
 {
-    "name": "Rose",
+    "name": "Brina",
     "class": "Support",
-    "stats": "https://i.imgur.com/FS2FPwy.jpg",
+    "stats": "https://i.imgur.com/j7eu6GP.jpg",
     "skills": [
         {
-            "name": "Surge of Strength",
+            "name": "Protective Charms",
             "effect": "Probability: 7%"
-        },
-        {
-            "name": "Heroes Never Die",
-            "effect": "Probability: 18%"
         }
     ],
     "resistances": {

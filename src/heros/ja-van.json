@@ -1,0 +1,19 @@
+{
+    "name": "Ja Van",
+    "class": "Support",
+    "stats": "https://i.imgur.com/uMyx12d.jpg",
+    "skills": [
+        {
+            "name": "Weakening Whip",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "5%",
+        "burning": "10%",
+        "freezing": "10%",
+        "poisoning": "20%",
+        "stunning": "15%",
+        "weakening": "20%"
+    }
+}

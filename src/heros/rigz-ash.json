@@ -1,0 +1,19 @@
+{
+    "name": "Rigz Ash",
+    "class": "Support",
+    "stats": "https://i.imgur.com/bkWgBYk.jpg",
+    "skills": [
+        {
+            "name": "Light and Darkness",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "5%",
+        "burning": "10%",
+        "freezing": "10%",
+        "poisoning": "10%",
+        "stunning": "20%",
+        "weakening": "25%"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Harumi",
+    "class": "Support",
+    "stats": "https://i.imgur.com/XPFT9kl.jpg",
+    "skills": [
+        {
+            "name": "Folding Fan of Vigor",
+            "effect": "Probability: 10%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "15%",
+        "burning": "25%",
+        "freezing": "10%",
+        "poisoning": "5%",
+        "stunning": "20%",
+        "weakening": "5%"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Marylee",
+    "class": "Support",
+    "stats": "https://i.imgur.com/ttqlhFu.jpg",
+    "skills": [],
+    "resistances": {
+        "bleeding": "10%",
+        "burning": "0%",
+        "freezing": "25%",
+        "poisoning": "20%",
+        "stunning": "5%",
+        "weakening": "10%"
+    }
+}

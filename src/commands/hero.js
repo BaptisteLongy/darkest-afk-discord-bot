@@ -28,11 +28,13 @@ function generateEmbedSkills(heroData) {
         }
     })
 
-    return {
-        title: "Skill Probabilities",
-        color: embedColor,
-        fields: skillFields
-    };
+    if (skillFields.length > 0) {
+        return {
+            title: "Skill Probabilities",
+            color: embedColor,
+            fields: skillFields
+        };
+    }
 }
 
 function generateEmbedResists(heroData) {
@@ -80,31 +82,62 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('hero')
         .setDescription('Gives the details of a specific hero')
-        .addStringOption(option => 
-            option.setName('heroname')
-                .setDescription('The name of the hero')
-                .setRequired(true)
-                // Damagers
-                .addChoice("Agra", "agra")
-                .addChoice("Avalon", "avalon")
-                .addChoice("Chas", "chas")
-                .addChoice("Drowzet", "drowzet")
-                .addChoice("Ridael", "ridael")
-                .addChoice("Sir Joseph", "sir-joseph")
-                .addChoice("Tiara", "tiara")
-                .addChoice("Violet", "violet")
-                .addChoice("Zik & Zak", "zik-zak")
-                .addChoice("Zi'uk", "ziuk")
-                // Tanks
-                .addChoice("Condrat", "condrat")
-                .addChoice("Gabriella", "gabriella")
-                .addChoice("Ghorm", "ghorm")
-                .addChoice("Kuldjar", "kuldjar")
-                .addChoice("Larion", "larion")
-                .addChoice("Rabba", "rabba")
-                .addChoice("Tao", "tao")
-                .addChoice("Tomas", "tomas")
-            ),
+        // Damagers
+        .addSubcommand(subCommand =>
+            subCommand.setName('damager')
+                .setDescription('Gives the details of a specific damager')
+                .addStringOption(option =>
+                    option.setName('heroname')
+                        .setDescription('The name of the hero')
+                        .setRequired(true)
+                        .addChoice("Agra", "agra")
+                        .addChoice("Avalon", "avalon")
+                        .addChoice("Chas", "chas")
+                        .addChoice("Drowzet", "drowzet")
+                        .addChoice("Ridael", "ridael")
+                        .addChoice("Sir Joseph", "sir-joseph")
+                        .addChoice("Tiara", "tiara")
+                        .addChoice("Violet", "violet")
+                        .addChoice("Zik & Zak", "zik-zak")
+                        .addChoice("Zi'uk", "ziuk")
+                )
+        )
+        // Tanks
+        .addSubcommand(subCommand =>
+            subCommand.setName('tank')
+                .setDescription('Gives the details of a specific tank')
+                .addStringOption(option =>
+                    option.setName('heroname')
+                        .setDescription('The name of the hero')
+                        .setRequired(true)
+                        .addChoice("Condrat", "condrat")
+                        .addChoice("Gabriella", "gabriella")
+                        .addChoice("Ghorm", "ghorm")
+                        .addChoice("Kuldjar", "kuldjar")
+                        .addChoice("Larion", "larion")
+                        .addChoice("Rabba", "rabba")
+                        .addChoice("Tao", "tao")
+                        .addChoice("Tomas", "tomas")
+                )
+        )
+        // Supports
+        .addSubcommand(subCommand =>
+            subCommand.setName('support')
+                .setDescription('Gives the details of a specific support')
+                .addStringOption(option =>
+                    option.setName('heroname')
+                        .setDescription('The name of the hero')
+                        .setRequired(true)
+                        .addChoice("Brina", "brina")
+                        .addChoice("Drogo", "drogo")
+                        .addChoice("Harumi", "harumi")
+                        .addChoice("Ja Van", "ja-van")
+                        .addChoice("Marylee", "marylee")
+                        .addChoice("Rigz Ash", "rigz-ash")
+                        .addChoice("Rose", "rose")
+                        .addChoice("Selina", "selina")
+                )
+        ),
 
     async execute(interaction) {
         await interaction.deferReply()
@@ -117,7 +150,9 @@ module.exports = {
             const skillsEmbed = generateEmbedSkills(hero)
             const resistEmbed = generateEmbedResists(hero)
 
-            await interaction.editReply({ embeds: [heroEmbed, skillsEmbed, resistEmbed] });
+            let potentialEmbeds = [heroEmbed, skillsEmbed, resistEmbed]
+
+            await interaction.editReply({ embeds: potentialEmbeds.filter(n => n) });
         } catch (error) {
             console.log(error)
             await interaction.editReply(`I don't know this hero :(`);

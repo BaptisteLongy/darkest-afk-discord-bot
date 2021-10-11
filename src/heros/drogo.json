@@ -1,0 +1,19 @@
+{
+    "name": "Drogo",
+    "class": "Support",
+    "stats": "https://i.imgur.com/R8wwluL.jpg",
+    "skills": [
+        {
+            "name": "Poisonous Fumes",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "5%",
+        "burning": "5%",
+        "freezing": "10%",
+        "poisoning": "20%",
+        "stunning": "20%",
+        "weakening": "20%"
+    }
+}
