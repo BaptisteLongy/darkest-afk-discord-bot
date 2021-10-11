@@ -1,0 +1,19 @@
+{
+    "name": "Larion",
+    "class": "Tank",
+    "stats": "https://i.imgur.com/1hY1jKc.jpg",
+    "skills": [
+        {
+            "name": "Two Souls",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "25%",
+        "burning": "5%",
+        "freezing": "20%",
+        "poisoning": "10%",
+        "stunning": "15%",
+        "weakening": "5%"
+    }
+}

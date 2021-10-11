@@ -1,0 +1,19 @@
+{
+    "name": "Tao",
+    "class": "Tank",
+    "stats": "https://i.imgur.com/0ijJfkF.jpg",
+    "skills": [
+        {
+            "name": "Weak Spot",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "10%",
+        "burning": "5%",
+        "freezing": "10%",
+        "poisoning": "10%",
+        "stunning": "25%",
+        "weakening": "20%"
+    }
+}

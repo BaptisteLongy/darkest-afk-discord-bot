@@ -1,0 +1,19 @@
+{
+    "name": "Kuldjar",
+    "class": "Tank",
+    "stats": "https://i.imgur.com/2StCtZJ.jpg",
+    "skills": [
+        {
+            "name": "Spiked Knuckles",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "20%",
+        "burning": "20%",
+        "freezing": "5%",
+        "poisoning": "10%",
+        "stunning": "20%",
+        "weakening": "5%"
+    }
+}

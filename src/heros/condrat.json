@@ -1,0 +1,19 @@
+{
+    "name": "Condrat",
+    "class": "Tank",
+    "stats": "https://i.imgur.com/oEjwYmd.jpg",
+    "skills": [
+        {
+            "name": "Call for Vengeance",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "15%",
+        "burning": "15%",
+        "freezing": "15%",
+        "poisoning": "15%",
+        "stunning": "20%",
+        "weakening": "0%"
+    }
+}

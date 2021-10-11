@@ -1,0 +1,19 @@
+{
+    "name": "Rabba",
+    "class": "Tank",
+    "stats": "https://i.imgur.com/RVaa1Sz.jpg",
+    "skills": [
+        {
+            "name": "Flying Shield",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "20%",
+        "burning": "10%",
+        "freezing": "10%",
+        "poisoning": "10%",
+        "stunning": "25%",
+        "weakening": "5%"
+    }
+}

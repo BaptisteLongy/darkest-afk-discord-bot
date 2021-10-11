@@ -1,0 +1,19 @@
+{
+    "name": "Ghorm",
+    "class": "Tank",
+    "stats": "https://i.imgur.com/hj0ruzR.jpg",
+    "skills": [
+        {
+            "name": "Freezing Ax",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "15%",
+        "burning": "10%",
+        "freezing": "20%",
+        "poisoning": "5%",
+        "stunning": "15%",
+        "weakening": "15%"
+    }
+}

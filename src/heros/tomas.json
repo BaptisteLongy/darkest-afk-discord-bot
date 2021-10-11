@@ -1,0 +1,19 @@
+{
+    "name": "Tomas",
+    "class": "Tank",
+    "stats": "https://i.imgur.com/sV6rjFz.jpg",
+    "skills": [
+        {
+            "name": "Thunderous Decree",
+            "effect": "Probability: 7%"
+        }
+    ],
+    "resistances": {
+        "bleeding": "20%",
+        "burning": "15%",
+        "freezing": "15%",
+        "poisoning": "5%",
+        "stunning": "20%",
+        "weakening": "5%"
+    }
+}

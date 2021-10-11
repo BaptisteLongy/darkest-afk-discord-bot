@@ -84,6 +84,7 @@ module.exports = {
             option.setName('heroname')
                 .setDescription('The name of the hero')
                 .setRequired(true)
+                // Damagers
                 .addChoice("Agra", "agra")
                 .addChoice("Avalon", "avalon")
                 .addChoice("Chas", "chas")
@@ -94,6 +95,15 @@ module.exports = {
                 .addChoice("Violet", "violet")
                 .addChoice("Zik & Zak", "zik-zak")
                 .addChoice("Zi'uk", "ziuk")
+                // Tanks
+                .addChoice("Condrat", "condrat")
+                .addChoice("Gabriella", "gabriella")
+                .addChoice("Ghorm", "ghorm")
+                .addChoice("Kuldjar", "kuldjar")
+                .addChoice("Larion", "larion")
+                .addChoice("Rabba", "rabba")
+                .addChoice("Tao", "tao")
+                .addChoice("Tomas", "tomas")
             ),
 
     async execute(interaction) {
