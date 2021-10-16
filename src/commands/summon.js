@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-const gemsEmbedColor = "#7a14e1"
+
 
 const bonuses = [
     {
@@ -214,7 +214,9 @@ function generateSummonBonusList() {
 }
 
 function generateGemSummonText() {
-    gemText = "**Hero Summon using gems**"
+    const gemsEmbedColor = "#7a14e1"
+
+    const gemText = "**Hero Summon using gems**"
 
     probabilitiesEmbed = {
         title: "Probabilities",
@@ -305,6 +307,49 @@ function generateGemSummonText() {
     return { content: gemText, embeds: [probabilitiesEmbed, soulUnlockEmbed, soulWeightEmbed, additionalInfoEmbed] }
 }
 
+function generateScrollSummonText() {
+    const scrollEmbedColor = "#7a14e1"
+
+    let infoDescription = "The first pull gives one of those heros:"
+    infoDescription += "\nJa Van ; Drogo ; Rigz Ash"
+    infoEmbed = {
+        title: `Fun Fact`,
+        description: infoDescription,
+        color: scrollEmbedColor
+    }
+
+    herosUnlockEmbed = {
+        title: `Unlokcing heros`,
+        description: "Some heros are unlocked after reaching a certain stage",
+        color: scrollEmbedColor,
+        fields: [
+            {
+                name: "Rose",
+                value: "Once Chapter 3 is reached",
+                inline: true
+            },
+            {
+                name: "Avalon",
+                value: "Once Chapter 4 is reached",
+                inline: true
+            },
+            {
+                name: "Tomas",
+                value: "Mid Chapter 4",
+                inline: true
+            },
+            {
+                name: "Brina",
+                value: "Once Chapter 5 is reached",
+                inline: true
+            }
+        ]
+    }
+
+    const scrollText = "**Hero Summon using scrolls**"
+    return { content: scrollText, embeds: [herosUnlockEmbed, infoEmbed] }
+}
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('summon')
@@ -315,6 +360,9 @@ module.exports = {
         ).addSubcommand(subCommand =>
             subCommand.setName('gems')
                 .setDescription('List Hero Summon probabilities when using gems')
+        ).addSubcommand(subCommand =>
+            subCommand.setName('scrolls')
+                .setDescription('List Hero Summon infos when using scrolls')
         ),
     async execute(interaction) {
         await interaction.deferReply()
@@ -324,6 +372,8 @@ module.exports = {
                 await interaction.editReply("**Hero Summon bonuses in their cycling order** \n" + generateSummonBonusList())
             } else if (interaction.options.getSubcommand() === 'gems') {
                 await interaction.editReply(generateGemSummonText())
+            } else if (interaction.options.getSubcommand() === 'scrolls') {
+                await interaction.editReply(generateScrollSummonText())
             }
         } catch (error) {
             console.log(error)
