@@ -30,6 +30,10 @@ module.exports = {
                     value: 'Displays infos about battle events. Try "/battle events"'
                 },
                 {
+                    name: '/hall',
+                    value: 'Hall of Fame infos'
+                },
+                {
                     name: '/ping',
                     value: 'Just a ping! Helps checking if the bot is online',
                 }
