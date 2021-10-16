@@ -319,7 +319,7 @@ function generateScrollSummonText() {
     }
 
     herosUnlockEmbed = {
-        title: `Unlokcing heros`,
+        title: `Unlocking heros`,
         description: "Some heros are unlocked after reaching a certain stage",
         color: scrollEmbedColor,
         fields: [
