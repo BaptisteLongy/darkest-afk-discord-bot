@@ -214,17 +214,17 @@ function generateSummonBonusList() {
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('summon')
-		.setDescription('All the info we\'ve got about summons')
+		.setDescription('Everything we know about Hero Summoning')
         .addSubcommand(subCommand =>
 			subCommand.setName('bonus')
-				.setDescription('List all the summon bonuses in their cycling order')
+				.setDescription('List all the Hero Summon bonuses in their cycling order')
 		),
 	async execute(interaction) {
         await interaction.deferReply()
 
 		try {
 			if (interaction.options.getSubcommand() === 'bonus') {
-                await interaction.editReply(generateSummonBonusList())
+                await interaction.editReply("**Hero Summon bonuses in their cycling order** \n" + generateSummonBonusList())
 			}
 		} catch (error) {
 			console.log(error)
