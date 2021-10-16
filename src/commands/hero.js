@@ -3,6 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const heroLevelResource = require(`../data/heroLevelResource.json`);
 
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
 function getEmbedColor(heroClass) {
     return heroClass === "Support" ? "#0bd92a" : heroClass === "Tank" ? "#241def" : "#d90909"
 }
@@ -93,9 +97,9 @@ function calculateResourcesNeeded(start, end) {
         }
     }
     return {
-        heroXP: heroXP,
-        gold: gold,
-        heroMedal: heroMedal
+        heroXP: numberWithSpaces(heroXP),
+        gold: numberWithSpaces(gold),
+        heroMedal: numberWithSpaces(heroMedal)
     }
 }
 
