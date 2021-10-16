@@ -4,7 +4,10 @@ const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 
 const clientId = "895326452365553665"
-const guildId = "406861607390543873"
+// Dev Server
+// const guildId = "406861607390543873"
+// Target Server
+const guildId = "849744567540252762"
 
 const commands = [];
 const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.js'));
