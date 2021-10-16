@@ -1,0 +1,102 @@
+[
+    {
+        "rewards_list": [
+            {
+                "name": "Damager Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 1,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Tank Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 2,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Support Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 3,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Damager Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 4,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Tank Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 5,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Support Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 6,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Damager Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 7,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Tank Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 8,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Support Hero Shard",
+                "quantity": 20
+            }
+        ],
+        "rank": 9,
+        "summon_count": 20
+    },
+    {
+        "rewards_list": [
+            {
+                "name": "Soul Vessel",
+                "quantity": 1
+            }
+        ],
+        "rank": 10,
+        "summon_count": 20
+    }
+]
