@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('fs');
 const path = require('path');
+const heroLevelResource = require(`../data/heroLevelResource.json`);
 
 function getEmbedColor(heroClass) {
     return heroClass === "Support" ? "#0bd92a" : heroClass === "Tank" ? "#241def" : "#d90909"
@@ -78,10 +79,46 @@ function generateEmbedResists(heroData) {
     };
 }
 
+function calculateResourcesNeeded(start, end) {
+    // heroLevelResource
+    let heroXP = 0
+    let gold = 0
+    let heroMedal = 0
+
+    for (let i = start + 1; i <= end; i++) {
+        heroXP += heroLevelResource.lvlup_info.resources.hero_exp[`${i}`]
+        gold += heroLevelResource.lvlup_info.resources.gold[`${i}`]
+        if (heroLevelResource.lvlup_info.resources.hero_medal[`${i}`]) {
+            heroMedal += heroLevelResource.lvlup_info.resources.hero_medal[`${i}`]
+        }
+    }
+    return {
+        heroXP: heroXP,
+        gold: gold,
+        heroMedal: heroMedal
+    }
+}
+
+function generateLevelUpText(start, end) {
+    if (start >= end) {
+        return { content: "Target level **must** be higher than Current level", ephemeral: true }
+    } else if (end > 250) {
+        return { content: "Maximum level is 250", ephemeral: true }
+    }
+
+    let requiredResource = calculateResourcesNeeded(start, end)
+    let resourceText = `**Resources required to level up from ${start} to ${end}**`
+    resourceText += `\n${requiredResource.gold} gold`
+    resourceText += `\n${requiredResource.heroXP} XP`
+    resourceText += `\n${requiredResource.heroMedal} Hero Medals`
+
+    return {content: resourceText}
+}
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('hero')
-        .setDescription('Gives the details of a specific hero')
+        .setDescription('Gives various infos about heros')
         // Damagers
         .addSubcommand(subCommand =>
             subCommand.setName('damager')
@@ -137,26 +174,46 @@ module.exports = {
                         .addChoice("Rose", "rose")
                         .addChoice("Selina", "selina")
                 )
+        )
+        .addSubcommand(subCommand =>
+            subCommand.setName('levelup')
+                .setDescription('Calculates resources needed to level up a hero')
+                .addIntegerOption(option => option.setName('start').setDescription('Current level').setRequired(true))
+                .addIntegerOption(option => option.setName('end').setDescription('Target level').setRequired(true))
         ),
 
     async execute(interaction) {
         await interaction.deferReply()
-        try {
-            const heroName = interaction.options.getString('heroname').toLowerCase();
-            const rawHero = fs.readFileSync(`./src/heros/${heroName}.json`)
-            let hero = JSON.parse(rawHero);
 
-            const heroEmbed = generateEmbedHero(hero)
-            const skillsEmbed = generateEmbedSkills(hero)
-            const resistEmbed = generateEmbedResists(hero)
+        let command = interaction.options.getSubcommand()
+        if (command === 'damager' || command === 'tank' || command === 'support') {
+            try {
+                const heroName = interaction.options.getString('heroname').toLowerCase();
+                const rawHero = fs.readFileSync(`./src/heros/${heroName}.json`)
+                let hero = JSON.parse(rawHero);
 
-            let potentialEmbeds = [heroEmbed, skillsEmbed, resistEmbed]
+                const heroEmbed = generateEmbedHero(hero)
+                const skillsEmbed = generateEmbedSkills(hero)
+                const resistEmbed = generateEmbedResists(hero)
 
-            await interaction.editReply({ embeds: potentialEmbeds.filter(n => n) });
-        } catch (error) {
-            console.log(error)
-            await interaction.editReply(`I don't know this hero :(`);
+                let potentialEmbeds = [heroEmbed, skillsEmbed, resistEmbed]
+
+                await interaction.editReply({ embeds: potentialEmbeds.filter(n => n) });
+            } catch (error) {
+                console.log(error)
+                await interaction.editReply(`I don't know this hero :(`);
+            }
+        } else if (command === 'levelup') {
+            try {
+                let start = interaction.options.getInteger('start');
+                let end = interaction.options.getInteger('end');
+                await interaction.editReply(generateLevelUpText(start, end));
+            } catch (error) {
+                console.log(error)
+                await interaction.editReply(`Something went wrong with the calculation :(`);
+            }
+        } else {
+            await interaction.editReply(`I don't know this command :(`);
         }
-
     },
 };
