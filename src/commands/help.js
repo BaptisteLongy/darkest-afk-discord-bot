@@ -22,6 +22,10 @@ module.exports = {
                     value: 'Everything we know about Hero Summoning. Try "/summon bonus"'
                 },
                 {
+                    name: '/worldsplit',
+                    value: 'Everything we know about World Split.'
+                },
+                {
                     name: '/battle',
                     value: 'Displays infos about battle events. Try "/battle events"'
                 },
