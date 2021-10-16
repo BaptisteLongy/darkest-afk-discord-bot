@@ -308,7 +308,7 @@ function generateGemSummonText() {
 }
 
 function generateScrollSummonText() {
-    const scrollEmbedColor = "#7a14e1"
+    const scrollEmbedColor = "#9f980c"
 
     let infoDescription = "The first pull gives one of those heros:"
     infoDescription += "\nJa Van ; Drogo ; Rigz Ash"
