@@ -18,6 +18,10 @@ module.exports = {
                     value: 'Displays infos about a specific hero'
                 },
                 {
+                    name: '/summon',
+                    value: 'Everything we know about summoning heros. Try "/summon bonus"'
+                },
+                {
                     name: '/battle',
                     value: 'Displays infos about battle events. Try "/battle events"'
                 },
