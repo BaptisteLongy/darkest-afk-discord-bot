@@ -36,6 +36,10 @@ module.exports = {
                 {
                     name: '/ping',
                     value: 'Just a ping! Helps checking if the bot is online',
+                },
+                {
+                    name: '/campaign_progress',
+                    value: 'Everything we know about World Split.'
                 }
             ]
         };
