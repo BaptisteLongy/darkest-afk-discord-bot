@@ -4,7 +4,7 @@ const worldSplitBonuses = require(`../data/worldSplitBonuses.json`);
 function generateWorldSplitBonusList() {
     return worldSplitBonuses.reduce((finalText, bonus) => {
         let bonusText = `**Rank ${bonus.rank}**`
-        bonusText += `\nNb of summons to reach the bonus: ${bonus.summon_count}`
+        bonusText += `\nTotal WS needed: ${bonus.total_summon_count}`
         bonus.rewards_list.forEach(reward => {
             bonusText += `\n${reward.quantity}x ${reward.name}`
         })

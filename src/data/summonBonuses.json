@@ -1,0 +1,192 @@
+[{
+   "rewards_list": [
+       {
+           "name": "Summoning Scroll",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 1,
+   "total_summon_count": 20
+},
+{
+   "rewards_list": [
+       {
+           "name": "Grey Soul",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 5
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 2,
+   "total_summon_count": 50
+},
+{
+   "rewards_list": [
+       {
+           "name": "Summoning Scroll",
+           "quantity": 1
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 3,
+   "total_summon_count": 70
+},
+{
+   "rewards_list": [
+       {
+           "name": "Grey Soul",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 5
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 4,
+   "total_summon_count": 100
+},
+{
+   "rewards_list": [
+       {
+           "name": "Summoning Scroll",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 5,
+   "total_summon_count": 120
+},
+{
+   "rewards_list": [
+       {
+           "name": "Green Soul",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 10
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 10
+       }
+   ],
+   "rank": 6,
+   "total_summon_count": 160
+},
+{
+   "rewards_list": [
+       {
+           "name": "Summoning Scroll",
+           "quantity": 1
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 7,
+   "total_summon_count": 180
+},
+{
+   "rewards_list": [
+       {
+           "name": "Grey Soul",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 5
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 8,
+   "total_summon_count": 210
+},
+{
+   "rewards_list": [
+       {
+           "name": "Summoning Scroll",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 9,
+   "total_summon_count": 230
+},
+{
+   "rewards_list": [
+       {
+           "name": "Green Soul",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 10
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 10
+       }
+   ],
+   "rank": 10,
+   "total_summon_count": 270
+},
+{
+   "rewards_list": [
+       {
+           "name": "Summoning Scroll",
+           "quantity": 1
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 5
+       }
+   ],
+   "rank": 11,
+   "total_summon_count": 290
+},
+{
+   "rewards_list": [
+       {
+           "name": "Blue Soul",
+           "quantity": 1
+       },
+       {
+           "name": "2H Gold Chest",
+           "quantity": 20
+       },
+       {
+           "name": "2H Hero XP Chest",
+           "quantity": 20
+       }
+   ],
+   "rank": 12,
+   "total_summon_count": 340
+}]
