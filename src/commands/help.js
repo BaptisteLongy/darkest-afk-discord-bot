@@ -36,6 +36,10 @@ module.exports = {
                 {
                     name: '/ping',
                     value: 'Just a ping! Helps checking if the bot is online',
+                },
+                {
+                    name: '/campaign_progress',
+                    value: 'Discover when you can unlock specific modes and items.'
                 }
             ]
         };
