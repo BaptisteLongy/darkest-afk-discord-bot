@@ -25,7 +25,8 @@ You need node.js 16 or higher
 * Run `node index.js`
 * Go to your discord server and try it!
    * You can type `/ping` and if everything went well you should get this type of response
-![image](https://user-images.githubusercontent.com/52977737/137628221-019ca354-1e47-4a26-9caf-d7c9c336f1f4.png)
+
+![Bot response to ping](https://user-images.githubusercontent.com/52977737/137628221-019ca354-1e47-4a26-9caf-d7c9c336f1f4.png)
 ## Adding new commands
 We follow [Discord.js recommendations](https://discordjs.guide/creating-your-bot/command-handling.html#individual-command-files)
 * To add a command, add a dedicated js file under `/src/commands`
