@@ -39,7 +39,7 @@ module.exports = {
                 },
                 {
                     name: '/campaign_progress',
-                    value: 'Everything we know about World Split.'
+                    value: 'Discover when you can unlock specific modes and items.'
                 }
             ]
         };
