@@ -32,4 +32,4 @@ We follow [Discord.js recommendations](https://discordjs.guide/creating-your-bot
 * To add a command, add a dedicated js file under `/src/commands`
 * Write the code of the command
 * Run `node deploy-commands.js`
-* Run `node index.js` to test it
+* Run `node src/index.js` to test it
