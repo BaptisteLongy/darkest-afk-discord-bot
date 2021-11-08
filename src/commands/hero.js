@@ -106,8 +106,8 @@ function calculateResourcesNeeded(start, end) {
 function generateLevelUpText(start, end) {
     if (start >= end) {
         return { content: "Target level **must** be higher than Current level", ephemeral: true }
-    } else if (end > 250) {
-        return { content: "Maximum level is 250", ephemeral: true }
+    } else if (end > heroLevelResource.lvlup_info.max_lvl) {
+        return { content: `Maximum level is ${heroLevelResource.lvlup_info.max_lvl}`, ephemeral: true }
     } else if (start < 1) {
         return { content: "Minimum level is 1", ephemeral: true }
     }
