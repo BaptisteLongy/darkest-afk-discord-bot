@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const campaign = [
     { chapter: 1, levels: 5, totalProgress: "1-5", unlocks: [] },
     { chapter: 2, levels: 20, totalProgress: "6-25", unlocks: ["**Mines of Abyss (unlock at half chapter)**"] },
-    { chapter: 3, levels: 20, totalProgress: "26-45", unlocks: ["**Tower of Darkness**", "**Apprentice Gear (green)**"] },
+    { chapter: 3, levels: 20, totalProgress: "26-45", unlocks: ["**Tower of Darkness**", "**Apprentice Gear (green)**", "**Arena of Doom (unlock at half chapter)**"] },
     { chapter: 4, levels: 20, totalProgress: "46-65", unlocks: ["**Utopia of Dragon**"] },
     { chapter: 5, levels: 40, totalProgress: "66-105", unlocks: ["**Labyrinth of Madness**", "**Hall of Honor (unlock at half chapter)**"] },
     { chapter: 6, levels: 40, totalProgress: "106-145", unlocks: ["**Adept Gear (blue)**"] },
@@ -15,7 +15,9 @@ const campaign = [
     { chapter: 12, levels: 40, totalProgress: "346-385", unlocks: ["**Master Gear (pink)**"] },
     { chapter: 13, levels: 40, totalProgress: "386-425", unlocks: ["**Master Universal Soul (purple)**"] },
     { chapter: 14, levels: 40, totalProgress: "426-465", unlocks: [] },
-    { chapter: 15, levels: 40, totalProgress: "466-505", unlocks: [] },
+    { chapter: 15, levels: 40, totalProgress: "466-505", unlocks: ["**Rare Master Gear (pink yellowish)**"] },
+    { chapter: 16, levels: 40, totalProgress: "506-545", unlocks: [] },
+    { chapter: 17, levels: 40, totalProgress: "546-585", unlocks: [] },
 ]
 
 function generateProgressList() {
